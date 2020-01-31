@@ -34,6 +34,7 @@ function CharacterList() {
 
     return (
             <Container>
+              <h3>Dead Characters</h3>
                 {rickMorty.map((data, index) => (
                     <Character 
                     key={index}
