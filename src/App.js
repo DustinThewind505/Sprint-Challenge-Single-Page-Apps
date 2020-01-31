@@ -1,6 +1,9 @@
 import React from "react";
+import { Route } from 'react-router-dom';
+
 import Header from "./components/Header.js";
-import CharacterList from './components/CharacterList'
+import CharacterList from './components/CharacterList';
+import WelcomePage from "./components/WelcomePage.js";
 
 
 function App() {
@@ -8,7 +11,10 @@ function App() {
     <main>
       
       <Header />
+      <Route exact path='/' component={WelcomePage}/>
+      <Route path='/characters'>
       <CharacterList />
+      </Route>
     </main>
   );
 }
