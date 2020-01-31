@@ -1,11 +1,16 @@
 import React from "react";
 import Header from "./components/Header.js";
+import CharacterList from './components/CharacterList'
 
 
-export default function App() {
+function App() {
   return (
-    <main>
+    <div className="App">
+      
       <Header />
-    </main>
+      <CharacterList />
+    </div>
   );
 }
+
+export default App;

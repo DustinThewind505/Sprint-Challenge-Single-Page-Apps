@@ -1,5 +1,21 @@
 import React from "react";
 
-export default function CharacterCard() {
-  return <span>todo: character</span>;
+
+
+function CharacterCard(props){
+
+
+
+    return(
+        <div>
+    <h2>{props.name}</h2>
+    <img src={props.image}/>
+    </div>
+
+
+    )
 }
+
+
+
+export default CharacterCard;
