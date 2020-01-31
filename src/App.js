@@ -5,11 +5,11 @@ import CharacterList from './components/CharacterList'
 
 function App() {
   return (
-    <div className="App">
+    <main>
       
       <Header />
       <CharacterList />
-    </div>
+    </main>
   );
 }
 
