@@ -22,7 +22,7 @@ function CharacterList() {
 const [page, setPage] = useState(2)
 
     const [searchTerm, setSearchTerm] = useState("");
-    const [serachResults, setSearchResults] = useState([]);
+    const [searchResults, setSearchResults] = useState([]);
 
     const handleChanges = event => {
         setSearchTerm(event.target.value);
@@ -45,15 +45,10 @@ const [page, setPage] = useState(2)
 
     }, [searchTerm, page])
 
-
+    console.log("searchresults", searchResults[0])
     return (
             <Container>
               <h3>Characters</h3>
-              <input
-              placeholder="Search" 
-              value={searchTerm}
-              onChange={handleChanges}
-              />
               <div className="buttons">
               <button onClick={() => setPage(1)}>1</button>
               <button onClick={() => setPage(2)}>2</button>
@@ -81,7 +76,8 @@ const [page, setPage] = useState(2)
               <button onClick={() => setPage(24)}>24</button>
               <button onClick={() => setPage(25)}>25</button>
               </div>
-                {serachResults.map((data, index) => (
+              <SearchForm setSearchTerm={setSearchTerm} searchTerm={searchTerm}/>
+                {searchResults.map((data, index) => (
                     <Character 
                     key={index}
                     name={data.name}

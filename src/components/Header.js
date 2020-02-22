@@ -1,7 +1,7 @@
 import React from "react";
 import {Link} from 'react-router-dom';
 
-import SearchForm from './SearchForm'
+
 import styled from 'styled-components';
 
 const NavBar = styled.div`
@@ -22,7 +22,6 @@ export default function Header() {
       <Link to='/'>
         Welcome!
       </Link>
-      <SearchForm/>
       <Link to='/characters'>
         Characters
       </Link>
