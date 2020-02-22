@@ -25,6 +25,9 @@ export default function Header() {
       <Link to='/characters'>
         Characters
       </Link>
+      <Link to='/locations'>
+        Locations
+      </Link>
       </NavBar>
     </header>
   );

@@ -3,7 +3,9 @@ import { Route } from 'react-router-dom';
 
 import Header from "./components/Header.js";
 import CharacterList from './components/CharacterList';
+import LocationList from "./components/LocationsList";
 import WelcomePage from "./components/WelcomePage.js";
+import LocationsList from "./components/LocationsList";
 
 
 function App() {
@@ -15,6 +17,7 @@ function App() {
       <Route path='/characters'>
       <CharacterList />
       </Route>
+      <Route path='/locations' component={LocationsList}/>
     </main>
   );
 }

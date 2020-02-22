@@ -1,5 +1,10 @@
 import React from "react";
 
-export default function LocationCard({ name, type, dimension, residents }) {
-  return <span>todo: location</span>;
+export default function LocationCard(props) {
+
+  return (
+    <div>
+      {props.location.map(place => <h1>{place.name}</h1>)}
+    </div>
+  )
 }

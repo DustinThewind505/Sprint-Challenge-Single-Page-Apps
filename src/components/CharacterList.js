@@ -57,7 +57,6 @@ const [page, setPage] = useState(2)
 
     }, [searchTerm, page])
 
-    console.log("searchresults", searchResults[0])
     return (
             <Container>
               <h3>Characters</h3>
