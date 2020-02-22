@@ -28,6 +28,9 @@ export default function Header() {
       <Link to='/locations'>
         Locations
       </Link>
+      <Link to='/episodes'>
+        Episodes
+      </Link>
       </NavBar>
     </header>
   );

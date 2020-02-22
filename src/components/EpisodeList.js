@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import LocationCard from "./LocationCard";
+import EpisodeCard from "./EpisodeCard";
 import styled from "styled-components";
 
 const Container = styled.div`
@@ -18,13 +18,13 @@ animation-name: colorful;
 `;
 
 export default function LocationsList() {
-    const [location, setLocation] = useState([])
+    const [episode, setEpisode] = useState([])
 
   useEffect(() => {
     axios
-    .get(`https://rickandmortyapi.com/api/location`)
+    .get(`https://rickandmortyapi.com/api/episode`)
     .then(response => {
-        setLocation(response.data.results);
+        setEpisode(response.data.results);
     })
     .catch(error => {
         console.log("The data was not returned", error);
@@ -32,10 +32,10 @@ export default function LocationsList() {
 
 }, [])
 
-console.log(location)
+console.log(episode)
   return (
     <Container>
-      <LocationCard location={location}/>
+      <EpisodeCard episode={episode}/>
     </Container>
   )
 }
