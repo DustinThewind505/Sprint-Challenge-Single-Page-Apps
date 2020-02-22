@@ -12,6 +12,18 @@ const Container = styled.div`
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
+
+  animation-name: colorful;
+    animation-duration: 5s;
+
+    @keyframes colorful {
+        0% {
+          background-color: black;
+        }
+        100% {
+          background-color: white;
+        }
+      }
 `;
 
 const Buttons = styled.div`

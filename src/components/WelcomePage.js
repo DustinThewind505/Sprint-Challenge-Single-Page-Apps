@@ -10,6 +10,18 @@ const Hero = styled.div`
   font-size: 2rem;
   padding: 2% 0;
   font-style: italic;
+
+  animation-name: colorful;
+    animation-duration: 5s;
+
+    @keyframes colorful {
+        0% {
+          background-color: black;
+        }
+        100% {
+          background-color: white;
+        }
+      }
 `;
 
 export default function WelcomePage() {
