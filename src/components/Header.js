@@ -24,7 +24,7 @@ export default function Header() {
       </Link>
       <SearchForm/>
       <Link to='/characters'>
-        Dead Characters 👻
+        Characters
       </Link>
       </NavBar>
     </header>

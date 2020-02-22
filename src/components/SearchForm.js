@@ -3,34 +3,30 @@ import React, { useState, useEffect } from "react";
 export default function SearchForm(props) {
 
   const [searchTerm, setSearchTerm] = useState("");
-  const [searchResults, setSearchResults] = useState(props);
+  const [searchResults, setSearchResults] = useState([]);
 
-  const handleChanges = e => {
-    setSearchTerm(e.target.value);
+  const handleChanges = event => {
+    setSearchTerm(event.target.value);
   };
+  console.log(props.character)
+  useEffect(() => {
+    const results = props.character.filter(element => 
+      element.name.toLowerCase().includes(searchTerm.toLowerCase())
+      )
 
-  // useEffect(() => {
-  //   if (searchTerm === "") {
-  //     setSearchResults(props);
-  //   } else {
-  //     setSearchResults(
-  //       props.filter(name => {
-  //         return name.toLowerCase().includes(searchTerm.toLowerCase());
-  //       })
-  //     );
-  //   }
-  // }, [searchTerm]);
+      setSearchResults(results);
+      
+  }, [searchTerm]);
  
   return (
     <section className="search-form">
      <form>
        <label>Search:_
-         <input type='search' name="search"
-        placeholder=""
+         <input name="search"
+        placeholder="Search"
         value={searchTerm}
-        onChange={e => handleChanges(e)}/>
+        onChange={handleChanges}/>
        </label>
-       <button type="submit">Search</button>
      </form>
     </section>
   );
